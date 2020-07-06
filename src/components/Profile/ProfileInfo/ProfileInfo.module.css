@@ -1,0 +1,40 @@
+.head{
+  margin-top: 0px;
+  font-weight: 500;
+}
+
+.conText{
+  padding-left: 10px;
+}
+.main{
+  display: grid;
+  grid-template-columns: 2fr 30fr;
+  line-height: 1;
+  align-items: center;
+}
+.img{
+  border-radius: 50%;
+  min-width: 150px;
+}
+
+
+.input{
+  width: 100%
+}
+
+@media(min-width:767px)
+{
+  .jobInfo{
+    grid-column: 2/30;
+    padding-left: 10px;
+  }
+  .img{
+    border-radius: 50%;
+    min-width: 200px;
+  }
+  .input{
+    width: 30%;
+    min-width: 180px;
+  }
+}
+ 

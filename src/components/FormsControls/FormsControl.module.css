@@ -1,0 +1,26 @@
+.formControl.error textarea,
+.formControl.error input{
+    border: solid red 2px;
+    z-index: 1;
+}
+
+.formControl.error span{
+    padding-top: 20px;
+    z-index: 100;
+    color: red;
+    line-height: 1;
+}
+
+.formControl{
+    display: block;
+}
+
+.form_summary_error{
+    border: solid red 2px;
+    padding: 10px;
+    color: red;
+    width: 30%;
+    line-height: 1;
+    height: auto;
+    border-radius: 5px;
+}

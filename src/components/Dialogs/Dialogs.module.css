@@ -1,0 +1,42 @@
+.dialogs{
+    line-height: 1.7;
+    display: grid;
+    grid-template-columns: 3fr 28fr;
+}
+
+.dialogsItem{
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border-right: 1px solid rgba(149, 149, 149, 0.5);
+}
+
+.send{
+    grid-column: 2/4;
+    margin-top: 20px;
+}
+
+.dialogsItem .active{
+    transform: scale(1.4);
+    transition: all 1s ease 0;
+    border-radius: 100px;
+    background-color: rgba(211, 211, 211, 0.5);
+    padding-left: 5px;
+}
+
+.dialog>a{
+    color: #000;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.mesItem{
+    align-self: end;
+    padding-left: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
