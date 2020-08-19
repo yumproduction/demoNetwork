@@ -1,6 +1,8 @@
 .wrap{
     margin: 0 auto;
 text-align: center;
+font-size: calc(10px + 4 * ((100vw - 320px) / 960));
+
 }
 .pagination{
     display: inline;
@@ -18,8 +20,11 @@ text-align: center;
 }
 
 @media(max-width: 508px){
-    .pagination span{
-        padding: 10px 5px 5px;
+    .pagination{
+        display: inline-block;
+    }
+    .prev{
+        margin-bottom: 10px;
     }
 }
 

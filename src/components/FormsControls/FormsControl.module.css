@@ -20,7 +20,9 @@
     padding: 10px;
     color: red;
     width: 30%;
+    min-width: 100px;
     line-height: 1;
     height: auto;
     border-radius: 5px;
+    max-width: 200px;
 }

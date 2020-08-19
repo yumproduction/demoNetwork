@@ -18,7 +18,7 @@ let Paginator = (props) => {
     let rightPortionNumeber = props.portionSize*portionNumber;
     return <div className={classes.wrap}>
         <div className={cn(classes.pagination)}>
-            {portionNumber >1 && <button onClick = {()=> setPortionNumebr(portionNumber-1)}>Prev</button>}
+            {portionNumber >1 && <button className = {classes.prev} onClick = {()=> setPortionNumebr(portionNumber-1)}>Prev</button>}
             {pages
             .filter(p => p >= leftPortionNumber && p<=rightPortionNumeber)
             .map((p) =>{

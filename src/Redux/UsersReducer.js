@@ -15,7 +15,7 @@ let initialState = {
     selectedPage: 1,
     isFetching: false,
     followingInProgress: [],
-    portionSize: 10
+    portionSize: 5
 };
 
 

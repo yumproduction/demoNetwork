@@ -12,6 +12,7 @@
   background-size: contain;
   z-index: 0;
   position: fixed;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
 }
 
 .wrapper.nightMode{
@@ -43,7 +44,7 @@ button{
   color: #fff;
   background-color: #5f7a6e;
   border-radius: 5px;
-  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
   font-family: inherit;
   margin-top: 10px;
 }
@@ -87,11 +88,11 @@ h2 {
 }
 
 p {
-  font-size: calc(15px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
 }
 
 a {
-  font-size: calc(12px + 12 * ((100vw - 320px) / 960));
+  font-size: calc(8px + 12 * ((100vw - 320px) / 960));
   text-decoration: none;
 }
 
