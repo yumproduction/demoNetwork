@@ -3,7 +3,9 @@
 text-align: center;
 }
 .pagination{
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .pagination span{
@@ -13,6 +15,12 @@ text-align: center;
 .selectedPage{
     border: 1px solid #000;
     border-radius: 50%;
+}
+
+@media(max-width: 508px){
+    .pagination span{
+        padding: 10px 5px 5px 0;
+    }
 }
 
 

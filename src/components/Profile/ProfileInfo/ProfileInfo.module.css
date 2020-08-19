@@ -8,17 +8,14 @@
   min-height: 150px;
   max-height: 200px;
 }
-.conText{
-  grid-column: 1/30;
-}
+
 .main{
-  display: grid;
-  grid-template-columns: 2fr 30fr;
+
   line-height: 1;
   align-items: center;
 }
 .img{
-  border-radius: 50%;
+  border-radius: 100%;
   min-width: 150px;
   max-width: 200px;
 }
@@ -56,6 +53,10 @@
 
 @media(min-width:767px)
 {
+  .main{
+    display: grid;
+    grid-template-columns: 2fr 30fr;
+  }
   .avatar{
     min-height: 200px;
     max-height: 250px;
@@ -104,3 +105,30 @@
   }
 }
  
+
+
+.error {
+    border: solid red 2px;
+    z-index: 1;
+}
+
+.formControl.error span{
+    padding-top: 20px;
+    z-index: 100;
+    color: red;
+    line-height: 1;
+}
+
+.formControl{
+    display: block;
+}
+
+.form_summary_error{
+    border: solid red 2px;
+    padding: 10px;
+    color: red;
+    width: 30%;
+    line-height: 1;
+    height: auto;
+    border-radius: 5px;
+}

@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './ProfileInfo.module.css';
-import { maxLengthCreator } from '../../../utils/validators/validators';
 
 
 class ProfileStatus extends React.Component {
-
     state = {
         editMode: false,
-        status: this.props.status
+        status: this.props.status,
+        validate: true,
+        message: null
     }
 
     activateEditMode = () => {
@@ -24,30 +24,32 @@ class ProfileStatus extends React.Component {
     }
 
     onStatusChange = (e) => {
+
         this.setState({
             status: e.currentTarget.value
         });
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevProps.status !== this.props.status) 
-        this.setState({ status: this.props.status });
+        if (prevProps.status !== this.props.status)
+            this.setState({ status: this.props.status });
     }
 
-    // AddStatus = () => {
-    //     return <form onSubmit = { this.props.handleSubmit}>
-    //         <Field component = {'input'} type="text" 
-    //         name={'status'}placeholder='Enter status...'
-    //                 onClick={this.activateEditMode}
-    //                 onBlur={this.deactivateEditMode}
-    //                 value={!this.state.status ? '' : this.state.status} />
-
-    //             <div>{this.state.editMode ? <button className={classes.btn}>Save</button> : null}</div>
-    //     </form>
-    // }
-
-    // AddStatusRedux = reduxForm({ form: 'status' })(this.AddStatus);
-    
+    maxLengthCreator = (e) => {
+        if (e.currentTarget.value.length > 15) {
+            this.setState({
+                validate: false,
+                message: 'Status should not be more than 15 symblos'
+            });
+            return;
+        }
+        else {
+            this.onStatusChange(e);
+            this.setState({
+                validate: true
+            });
+        }
+    }
 
     render() {
         return <div className={classes.status}>
@@ -61,17 +63,16 @@ class ProfileStatus extends React.Component {
 
             <div>
                 <input type="text" placeholder='No status'
-                    className = {classes.input}
-                    onChange={this.onStatusChange}
+                    className={classes.input + ' ' + this.state.validate === false ? classes.error : ''}
+                    onChange={this.maxLengthCreator}
                     onClick={this.activateEditMode}
                     onBlur={this.deactivateEditMode}
-                    value={this.state.status}
-                    validate={maxLengthCreator(15)}/>
-                    
+                    value={this.state.status} />
             </div>
+            <div className={classes.error}>{this.state.message}</div>
             <div>
                 {this.state.editMode ? <button className={classes.btn}>Save</button> : null}
-            </div> 
+            </div>
             <br />
         </div>
     }

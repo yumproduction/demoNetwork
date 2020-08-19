@@ -67,6 +67,10 @@ img{
     }
 }
 
+.info{
+    display: grid;
+}
+
 .ns{
     font-weight: 600;
     margin-top: -4px;
@@ -75,7 +79,8 @@ img{
 
 .location{
     font-weight: 600;
-
+    align-self: end;
+    line-height: 1.5;
 }
 
 .status{
@@ -89,3 +94,5 @@ img{
   .disabled{
       background-color: #ccc;
   }
+
+
