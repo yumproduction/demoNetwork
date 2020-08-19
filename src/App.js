@@ -3,14 +3,14 @@ import './App.css';
 import RenderContainer from './components/Render/RenderContainer';
 import { Provider } from 'react-redux';
 import store from './Redux/redux-store';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 
 
 //Componenta that returns hypertext JSX
 const App = (props) => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <RenderContainer />
         {/* <div className={state.nightMode.nightMode === true ? 'nightMode' : ''}> */}
@@ -29,7 +29,7 @@ const App = (props) => {
         </div> */}
         {/* </div> */}
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
