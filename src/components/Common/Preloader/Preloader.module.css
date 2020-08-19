@@ -1,0 +1,29 @@
+.preloader{
+    width: 30%;
+    margin: 0 auto;
+    align-items: center;
+    display: grid;
+}
+  
+.loader {
+  width: 90px;
+  height: 90px;
+  border: 5px solid #e4e1ec;
+  border-radius: 50%;
+  border-top-color: #5f7a6e;
+  border-bottom-color: #5f7a6e;
+  margin-left: 50%;
+  margin-top: 50%;
+  animation-duration: 2s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  align-self: center;
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
